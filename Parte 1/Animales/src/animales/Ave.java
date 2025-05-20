@@ -1,27 +1,27 @@
 package animales;
 
-public class Pajaro {
+public class Ave {
 //Aquí se almacena la información del pájaro
 
-    String nombre_especie;
-    double envergadura;
-    double peso;
+    private String especie;
+    private double envergadura;
+    private double peso;
 
-    public Pajaro(String nombre_especie, double envergadura, double peso) {
-        this.nombre_especie = nombre_especie;
+    public Ave(String nombre_especie, double envergadura, double peso) {
+        this.especie = nombre_especie;
         this.envergadura = envergadura;
         this.peso = peso;
     }
 
-    public Pajaro() {
+    public Ave() {
     }
 
-    public String getNombre_especie() {
-        return nombre_especie;
+    public String getEspecie() {
+        return especie;
     }
 
-    public void setNombre_especie(String nombre_especie) {
-        this.nombre_especie = nombre_especie;
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
 
     public double getEnvergadura() {
@@ -40,13 +40,16 @@ public class Pajaro {
         this.peso = peso;
     }
 
-    public void imprimir() {
+    public void imprimir_cabecera() {
         System.out.println("ZOOLÓGICO DE CUENCA – SECCIÓN DE AVES");
         System.out.println("Registro Sanitario No 48/38751");
         System.out.println("Para consultar el nombre del animal revise la etiqueta");
-        System.out.println("Peso: " + this.peso);
-        System.out.println("Envergadura: " + this.envergadura);
-        System.out.println("Nombre de la especie: " + this.nombre_especie);
+        imprimir_detalle();
     }
 
+    public void imprimir_detalle() {
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Envergadura: " + this.getEnvergadura());
+        System.out.println("Nombre de la especie: " + this.getEspecie());
+    }
 }
